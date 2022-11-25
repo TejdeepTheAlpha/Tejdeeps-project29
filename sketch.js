@@ -29,14 +29,14 @@ function setup() {
   /*bridge = new Base(15, { x: width / 2 - 400, y: height / 2 });
   jointPoint = new Base(width - 600, height / 2 + 10, 40, 20, "#8d6e63", true);*/
 
-  /*bridge = new Bridge(15, { x: width / 2 - 400, y: height / 2 });
-  jointPoint = new Base(width - 600, height / 2 + 10, 40, 20, "#8d6e63", true);*/
+  bridge = new Bridge(15, { x: width / 2 - 400, y: height / 2 });
+  jointPoint = new Base(width - 600, height / 2 + 10, 40, 20, "#8d6e63", true);
 
   /*bridge = new Base(15, { x: width / 2 - 400, y: height / 2 });
   jointPoint = new Bridge(width - 600, height / 2 + 10, 40, 20, "#8d6e63", true);*/
 
-  bridge = new Bridge(15, { x: width / 2 - 400, y: height / 2 });
-  jointPoint = new Bridge(width - 600, height / 2 + 10, 40, 20, "#8d6e63", true);
+  /*bridge = new Bridge(15, { x: width / 2 - 400, y: height / 2 });
+  jointPoint = new Bridge(width - 600, height / 2 + 10, 40, 20, "#8d6e63", true);*/
 
   
   Matter.Composite.add(bridge.body, jointPoint);
@@ -48,7 +48,7 @@ function setup() {
   //Matter.Composite.add(bridge.body);
 
 
-  //jointLink = new Link(bridge, jointPoint);
+  jointLink = new Link(bridge, jointPoint);
 
   for (var i = 0; i <= 8; i++) {
     var x = random(width / 2 - 200, width / 2 + 300);
